@@ -1,4 +1,4 @@
-module github.com/briansamuel/traceprovider.git
+module github.com/briansamuel/traceprovider
 
 go 1.18
 
