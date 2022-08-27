@@ -1,5 +1,5 @@
-# KafkaPubsub
-> move by briansamuel/traceprovider helper use concurrent to managerment job test.
+# TraceProvider
+> move by briansamuel/traceprovider helper tracing application.
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/princjef/gomarkdoc.svg)](https://pkg.go.dev/github.com/briansamuel/traceprovider)
 
