@@ -13,8 +13,9 @@ func TestTracer(t *testing.T) {
 	traceProvider.SetProvider()
 	// Get Tracer
 	traceProvider.GetTracer()
+	tracer := trace.Tracer()
 	//	span with tracer
-	_, span := traceProvider.GetTracer().Start(context.Background(), "test span")
+	_, span := tracer.Start(context.Background(), "test span")
 	defer span.End()
 
 }

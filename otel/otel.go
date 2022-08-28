@@ -14,6 +14,12 @@ import (
 	"os"
 )
 
+var tracer oteltrace.Tracer
+
+func Tracer() oteltrace.Tracer {
+	return tracer
+}
+
 type traceProvider struct {
 	service       string
 	jaegerService string
@@ -58,6 +64,7 @@ func (trace *traceProvider) SetProvider() {
 	otel.SetTracerProvider(tp)
 	tr := otel.Tracer(trace.service)
 	trace.tracer = tr
+	tracer = tr
 }
 
 func (trace *traceProvider) GetTracerWithService(service string) *oteltrace.Tracer {
